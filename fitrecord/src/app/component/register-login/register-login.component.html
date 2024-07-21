@@ -1,0 +1,85 @@
+<div class="container" [ngClass]="status ? 'sign-up-mode' : ''">
+  <div class="forms-container">
+    <div class="signin-signup">
+      <form action="" class="sign-in-form">
+        <h2 class="title">Bejelentkezés</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Felhasználónév">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Jelszó">
+        </div>
+        <input type="submit" value="bejelentkezés" class="btn solid">
+
+        <p class="social-text">Or sign in with social platforms</p>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </form>
+
+      <form action="" class="sign-up-form">
+        <h2 class="title">Regisztráció</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Felhasználónév">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Jelszó">
+        </div>
+        <input type="submit" value="regisztráció" class="btn solid">
+
+        <p class="social-text">Or sign up with social platforms</p>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="panels-container">
+    <div class="panel left-panel">
+      <div class="content">
+        <h3>New here?</h3>
+        <p>Lorem  sdfléákaésldfkéadjsfljadslkfjlakdsj ladslasd hfl lkfasdkl klas f</p>
+        <input type="submit" value="regisztáció" (click)="status=!status" class="btn blue">
+      </div>
+
+      <img src="assets/img/log.svg" class="image" alt="">
+    </div>
+
+    <div class="panel right-panel">
+      <div class="content">
+        <h3>One of us?</h3>
+        <p>Lorem  sdfléákaésldfkéadjsfljadslkfjlakdsj ladslasd hfl lkfasdkl klas f</p>
+        <input type="submit" value="bejelentkezés" (click)="status=!status" class="btn blue">
+      </div>
+
+      <img src="assets/img/reg.svg" class="image" alt="">
+    </div>
+  </div>
+</div>
+
+
