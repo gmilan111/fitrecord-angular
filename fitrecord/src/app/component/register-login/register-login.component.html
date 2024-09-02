@@ -1,17 +1,17 @@
 <div class="container" [ngClass]="status ? 'sign-up-mode' : ''">
   <div class="forms-container">
     <div class="signin-signup">
-      <form action="" class="sign-in-form">
+      <form action="" class="sign-in-form" [formGroup]="signin">
         <h2 class="title">Bejelentkezés</h2>
         <div class="input-field">
-          <i class="fas fa-user"></i>
-          <input type="text" placeholder="Felhasználónév">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" name="email" [formControl]="signin.controls.email">
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Jelszó">
+          <input type="password" placeholder="Jelszó" name="password" [formControl]="signin.controls.password">
         </div>
-        <input type="submit" value="bejelentkezés" class="btn solid">
+        <input type="submit" value="bejelentkezés" class="btn solid" (click)="sign_in()">
 
         <p class="social-text">Or sign in with social platforms</p>
         <div class="social-media">
@@ -27,21 +27,25 @@
         </div>
       </form>
 
-      <form action="" class="sign-up-form">
+      <form action="" class="sign-up-form" [formGroup]="register">
         <h2 class="title">Regisztráció</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Felhasználónév">
+          <input type="text" placeholder="Felhasználónév" name="username" [formControl]="register.controls.username">
         </div>
         <div class="input-field">
           <i class="fas fa-envelope"></i>
-          <input type="email" placeholder="Email">
+          <input type="email" placeholder="Email" name="email" [formControl]="register.controls.email">
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Jelszó">
+          <input type="password" placeholder="Jelszó" [formControl]="register.controls.password">
         </div>
-        <input type="submit" value="regisztráció" class="btn solid">
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Jelszó Megerősítése">
+        </div>
+        <input type="submit" value="regisztráció" class="btn solid" (click)="registration()">
 
         <p class="social-text">Or sign up with social platforms</p>
         <div class="social-media">
